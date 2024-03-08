@@ -1,0 +1,12 @@
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# MacOS system files
+.DS_Store
+
+# Optional npm cache & logs
+npm-debug.log*
+npm-cache/
