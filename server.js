@@ -37,7 +37,8 @@ async function fetchRecordsFromAirtable(tableName, fields, options = {}) {
         await base(tableName).select({
             fields: fields,
             ...options
-        }).eachPage(async (pageRecords, fetchNextPage) => {
+        }).eachPage(async (pageRecords, fetchNextPage) => { // pagination
+            // We don't care about other bloat stuff but fields
             records.push(...pageRecords.map(record => record.fields));
             await fetchNextPage();
         });
